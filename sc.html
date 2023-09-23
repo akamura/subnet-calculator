@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subnet Calculator</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/scal.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero-section">
+        <h1 class="display-4">Subnet Calculator</h1>
+        <p class="lead">An easy way to divide your network address in subnets.</p>
+      </div>
+      <div class="photoby"><a href="https://unsplash.com/photos/6fCfkt11-eQ" target="_blank">Photo by Eberard Grossgasteiger</a></div>
+      <div class="calculator">
+        <div class="calc-form">
+          <section id="calc-form">
+            <h4>Calculator Form</h4>
+            <form name="table" onsubmit="updateNetwork(); return false;">
+              <table>
+                <tr>
+                  <td class="label">Network address</td>
+                  <td class="label">Mask bits</td>
+                </tr>
+                <tr>
+                  <td><input type="text" name="network" size="15" maxlength="15" value="10.0.0.0"></td>
+                  <td>/ <input type="text" name="netbits" size="2" maxlength="2" value="16"></td>
+                  <td>
+                    <input type="submit" value="Update">
+                    <input type="button" value="Reset" onclick="if (confirm('If you reset I will start over and all subdivision will be lost. Do you confirm?')) startOver();">
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </section>
+        </div>
+        <div class="calc-table">
+          <section id="calc-table">
+            <h4>Result</h4>
+            <table class="table" cellspacing="0" cellpadding="2">
+              <thead>
+                <tr>
+                  <th id="subnetHeader">Subnet address</th>
+                  <th id="netmaskHeader">Netmask</th>
+                  <th id="rangeHeader">Address range</th>
+                  <th id="useableHeader">Useable IPs</th>
+                  <th id="hostsHeader">Hosts</th>
+                  <th id="divideHeader">Divide subnet</th>
+                  <th id="joinHeader">Join</th>
+                </tr>
+              </thead>
+              <tbody id="scalresult"></tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/scal.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js.js"></script>
+  </body>
+</html>
