@@ -1,7 +1,7 @@
 # Subnet Calculator
 After using for long time the "sipcalc tool" from CLI, it's now time to have something more visual and capable of dividing as well as joining subnets.
 
-![assets/img](screenshots.png)
+![Screenshot](Preview.png)
 
 ### Usage
 Download the repo and open the sc.html file to use the calculator.
